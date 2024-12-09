@@ -4,7 +4,20 @@ COVID Lung X-Rays Classification
 
 This project is a fork of [MAR24_BDS_Radios_Pulmonaire](https://github.com/DataScientest-Studio/MAR24_BDS_Radios_Pulmonaire) which was made during the Data Scientist course of [Datascientest](https://datascientest.com/) from March to June 2024. It uses the [COVID-QU-Ex dataset](https://www.kaggle.com/datasets/anasmohammedtahir/covidqu) available on Kaggle.
 
-View the original streamlit app on [Huggingface](https://huggingface.co/spaces/fdayde/streamlit-dl-radio)
+The goal of this fork is to further enhance the project with new and updated features and to improve user experience.
+
+View the updated streamlit app on [Huggingface](https://huggingface.co/spaces/NicoFena/Streamlit_COVID_Radio_DL)
+
+------------
+### Envisionned improvements
+- [x] Forked the project and hosted it on personnal HuggingFace Space for easier access and personalization
+- [ ] Update streamlit to account for deprecated functions as of December 2024
+- [ ] Add a set of x-ray masked image readily available for easier demonstration on streamlit
+- [ ] Introduce a lung segmentation model to easily process raw x-ray images
+- [ ] Add a new DL model for further prediction insight and model comparison ?
+- [ ] Add scripts to automatize processing and/or prediction of x-ray images ?
+...
+
 
 ------------
 ### References
@@ -25,41 +38,28 @@ View the original streamlit app on [Huggingface](https://huggingface.co/spaces/f
 supervised by: Gaël Penessot
 
 ------------
-### How to deploy the streamlit app on Huggingface: 
-
-- Create a new space on Huggingface and clone the repository
-- Push the content of the `src/streamlit` directory
-- Add the model's weights file to the `models` folder
-- Store the model weights in Git LFS by adding the following line to the `.gitattributes` file:  
-```*.h5 filter=lfs diff=lfs merge=lfs -text```
-- Push to Huggingface
-- Do not modify or delete the `REAMDE.md` file created by Huggingface during the initialization on the space.
-
-------------
 ### Project organization:
 
     ├── LICENSE
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data               <- Should be in your computer but not on Github (only in .gitignore)
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    ├── README.md          <- Top-level README for general information on the project
+    ├── data               <- Local only (added to .gitignore for size reasons)
+    │   ├── processed      <- Final data sets for modeling
+    │   └── raw            <- Original data dump
     │
-    ├── demo               <- Samples from the dataset for demonstration in streamlit
+    ├── demo               <- Samples from the dataset used in streamlit demonstration
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries, not on Github for size reasons
+    ├── models             <- Trained models or model weights (Local only for size reasons)
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's name, and a short `-` delimited description, e.g.
     │                         `1.0-alban-data-exploration`.
     │
+    ├── reports            <- Final report made during the project (PDF)
     │
-    ├── reports            <- The final report made during this project (PDF)
     │
+    ├── requirements.txt   <- Classic requirements file for reproducing the environment
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
+    ├── src                <- Source code for use in this project
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
@@ -72,7 +72,7 @@ supervised by: Gaël Penessot
     │   │   
     │   │── streamlit      <- Scripts for the Streamlit app
     │   │
-    │   ├── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   ├── visualization  <- Scripts to create exploratory and result-oriented visualizations
     │   │   └── visualize.py
 
 --------
