@@ -9,13 +9,14 @@ The goal of this fork is to further enhance the project with new and updated fea
 View the updated streamlit app on [Huggingface](https://huggingface.co/spaces/NicoFena/Streamlit_COVID_Radio_DL)
 
 ------------
-### Envisionned improvements
+### Envisioned improvements
 - [x] Forked the project and hosted it on personnal HuggingFace Space for easier access and personalization
 - [ ] Update streamlit to account for deprecated functions as of December 2024
 - [ ] Add a set of x-ray masked image readily available for easier demonstration on streamlit
 - [ ] Introduce a lung segmentation model to easily process raw x-ray images
 - [ ] Add a new DL model for further prediction insight and model comparison ?
 - [ ] Add scripts to automatize processing and/or prediction of x-ray images ?
+
 ...
 
 
