@@ -25,7 +25,7 @@ View the original streamlit app on [Huggingface](https://huggingface.co/spaces/f
 supervised by: Gaël Penessot
 
 ------------
-How to deploy the streamlit app on Huggingface: 
+### How to deploy the streamlit app on Huggingface: 
 
 - Create a new space on Huggingface and clone the repository
 - Push the content of the `src/streamlit` directory
@@ -36,8 +36,7 @@ How to deploy the streamlit app on Huggingface:
 - Do not modify or delete the `REAMDE.md` file created by Huggingface during the initialization on the space.
 
 ------------
-Project Organization
-------------
+### Project organization:
 
     ├── LICENSE
     ├── README.md          <- The top-level README for developers using this project.
