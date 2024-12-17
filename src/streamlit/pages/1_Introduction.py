@@ -160,7 +160,7 @@ if page == "Context : COVID":
 
     with col1:
         st.subheader("", divider = 'grey')
-        st.image(str(images / 'COVID19_lung_impact.jpg'), caption = 'COVID19 action on lungs, drawn by Brooke Ring', use_column_width=True)
+        st.image(str(images / 'COVID19_lung_impact.jpg'), caption = 'COVID19 action on lungs, drawn by Brooke Ring', use_container_width=True)
 
     with col2:
         st.subheader("", divider = 'grey')

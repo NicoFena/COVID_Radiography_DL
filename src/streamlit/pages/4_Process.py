@@ -59,7 +59,7 @@ if page == "Unfolding":
         st.markdown(" ")
     with col3:
         data_path = os.path.join(os.path.dirname(__file__), "..", "pictures", "unfolding.png")
-        st.image(data_path, caption="https://deepnote.com/app/a_mas/Data-Preprocessing-Tools-4943e322-768c-4961-b30f-c0e8f63bf0ec", use_column_width=True)
+        st.image(data_path, caption="https://deepnote.com/app/a_mas/Data-Preprocessing-Tools-4943e322-768c-4961-b30f-c0e8f63bf0ec", use_container_width=True)
 
 
 
@@ -113,7 +113,7 @@ CLAHE is a variant of histogram equalization that operates on small regions in t
 - Enhances local contrast while preventing noise amplification.
 - Suitable for medical images and other scenarios where local contrast enhancement is critical.''')
     image_path = os.path.join(os.path.dirname(__file__), "..", "pictures", "preprocessing_comparison.png")
-    st.image(image_path, caption="Comparison of normalization methods - images/pixel intensity repartition", use_column_width=True)
+    st.image(image_path, caption="Comparison of normalization methods - images/pixel intensity repartition", use_container_width=True)
     
     st.subheader("Conclusion", divider = 'gray')
     st.markdown(r'''
@@ -169,7 +169,7 @@ The data has already been divided into 3 sets : Train, Validation and Test. The 
     with col2:
         with open(diagram_path, "r") as training_process:
             svg_content = training_process.read()
-        st.image(svg_content, use_column_width=False)
+        st.image(svg_content, use_container_width=False)
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Example of Overfitting", divider = 'grey')

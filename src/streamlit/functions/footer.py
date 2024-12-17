@@ -39,7 +39,7 @@ def add_footer():
         st.markdown(" ")
 
     with hcol3:
-        st.image(logo_path, use_column_width=True)
+        st.image(logo_path, use_container_width=True)
 
 
 # Use: at the end each script:

@@ -32,7 +32,7 @@ base_path = Path.cwd()
 images = base_path / 'pictures'
 banner_path = str(images / 'banner_streamlit.jpg')
 
-st.image(banner_path, use_column_width=True)
+st.image(banner_path, use_container_width=True)
 
 
 add_footer()
