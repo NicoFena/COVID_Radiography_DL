@@ -126,7 +126,7 @@ if page == "Data Visualization":
         # DataViz - Image Count
         st.subheader("Image count", divider = 'gray')
         data_path1 = os.path.join(path_images, "data_repartition.PNG")
-        st.image(data_path1, caption="Repartition of images in each label", use_column_width=True)
+        st.image(data_path1, caption="Repartition of images in each label", use_container_width=True)
         st.markdown("""
                 As seen above, with this new dataset, we worked on more data, which usually leads to more accurate models. 
                 In our case, we also have access to balanced data, which simplifies the preprocessing and reduce bias in models.  
@@ -140,7 +140,7 @@ if page == "Data Visualization":
         # DataViz - Intensity Mean
         st.subheader("Mean intensity", divider = 'grey')
         data_path2 = os.path.join(path_images, "mean_intensity.PNG")
-        st.image(data_path2, caption="Mean intensity of images and masks in each label", use_column_width=True)
+        st.image(data_path2, caption="Mean intensity of images and masks in each label", use_container_width=True)
         st.markdown("""
                     Masks have roughly the same intensity spread for each label, but we can see that COVID images are more intense in average.  
                     This tends to show that COVID-infected lungs have clear light areas compared to healthy lungs and other infections.
