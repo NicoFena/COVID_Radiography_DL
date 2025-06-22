@@ -3,7 +3,7 @@ name: Deploy Streamlit to HF Space
 on:
   push:
     branches:
-      - main
+      - main  # adapte selon ta branche principale
 
 jobs:
   deploy:
@@ -13,10 +13,11 @@ jobs:
     - name: Checkout main repo
       uses: actions/checkout@v3
 
-    - name: Setup git user
+    - name: Install Git LFS
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        sudo apt-get update
+        sudo apt-get install -y git-lfs
+        git lfs install
 
     - name: Clone HF Space repo
       env:
@@ -28,17 +29,14 @@ jobs:
       run: |
         rsync -av src/streamlit/ hf-space/
 
-    - name: Commit changes
-      run: |
-        cd hf-space
-        git add .
-        git commit -m "Update Space from main repo" || echo "No changes to commit"
-
-    - name: Push changes to HF Space
+    - name: Commit and push changes to HF Space
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
         GIT_ASKPASS: /bin/echo
       run: |
         cd hf-space
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Update Space from main repo" || echo "No changes to commit"
         git push https://x-access-token:${HF_TOKEN}@huggingface.co/spaces/NicoFena/Covid_Radio_DL HEAD:main
-
