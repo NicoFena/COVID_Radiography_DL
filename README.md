@@ -12,7 +12,7 @@ View the updated streamlit app on [Huggingface](https://huggingface.co/spaces/Ni
 ### Envisioned improvements
 - [x] Forked the project and hosted it on personnal HuggingFace Space for easier access and personalization
 - [x] Updated streamlit to account for deprecated functions as of December 2024
-- [ ] Add a set of x-ray masked image readily available for easier demonstration on streamlit
+- [ ] Add a set of x-ray masked image readily available for easier demonstration
 - [ ] Automatize the update of the Huggingface Space from the GitHub Repository (Creating a new space and incorporating GitHub actions)
 - [ ] Modify the code of the streamlit folder for better viewing experience
 - [ ] Introduce a lung segmentation model to easily process raw x-ray images
