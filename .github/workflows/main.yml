@@ -15,7 +15,7 @@ jobs:
 
     - name: Clone HF Space repo
       env:
-        HF_TOKEN: ${{ secrets.HF_Token }}
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         git clone https://${HF_TOKEN}@huggingface.co/spaces/NicoFena/Covid_Radio_DL hf-space
 
@@ -25,7 +25,7 @@ jobs:
 
     - name: Commit and push changes to HF Space
       env:
-        HF_TOKEN: ${{ secrets.HF_Token }}
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
       run: |
         cd hf-space
         git config user.name "github-actions[bot]"
