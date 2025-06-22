@@ -13,6 +13,9 @@ jobs:
     - name: Checkout main repo
       uses: actions/checkout@v3
 
+    - name: Setup git to use token
+      run: git config --global credential.helper store
+
     - name: Clone HF Space repo
       env:
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -33,3 +36,4 @@ jobs:
         git add .
         git commit -m "Update Space from main repo" || echo "No changes to commit"
         git push https://${HF_TOKEN}@huggingface.co/spaces/NicoFena/Covid_Radio_DL HEAD:main
+
